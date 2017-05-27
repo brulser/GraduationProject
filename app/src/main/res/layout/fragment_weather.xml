@@ -1,0 +1,217 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brulser.graduationproject.fragment.WeatherFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scorll_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_city_top"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="未知城市"
+                android:textColor="@color/colorwhite"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_date_top"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="7月31日 周日"
+                android:textColor="@color/colorwhite"
+                android:textSize="18sp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:gravity="top">
+
+                <TextView
+                    android:id="@+id/tv_temper_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:text="24"
+                    android:textColor="@android:color/white"
+                    android:textSize="54sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_temper_top"
+                    android:text="°"
+                    android:textColor="@android:color/white"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_info_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="晴"
+                android:textColor="@color/colorWeatherTextTop"
+                android:textSize="18sp" />
+
+            <com.brulser.graduationproject.view.WeatherGraph
+                android:id="@+id/weather_graph"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="60dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.brulser.graduationproject.view.DashboardView2
+                    android:id="@+id/dash_pm25"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3" />
+                <!--* pm25 : {"curPm":"68","pm25":"47","pm10":"66","level":"2",
+                                "quality":"良",
+                        "des":"可以正常在户外活动，易敏感人群应减少外出"}-->
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="空气质量"
+                            android:textColor="@color/colorWeatherTextTop"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_airq_weahter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=": 0"
+                            android:textColor="@color/colorWeatherTextTop"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="PM2.5"
+                            android:textColor="@color/colorWeatherTextTop"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pm25_weahter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=": 0"
+                            android:textColor="@color/colorWeatherTextTop"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="PM10"
+                            android:textColor="@color/colorWeatherTextTop"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pm10_weahter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=": 0"
+                            android:textColor="@color/colorWeatherTextTop"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="适宜活动："-->
+                    <!--android:textColor="@color/colorWeatherTextTop"-->
+                    <!--android:textSize="18sp" />-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="可以正常在户外活动，易敏感人群应减少外出"-->
+                    <!--android:textColor="@color/colorWeatherTextTop"-->
+                    <!--android:textSize="18sp" />-->
+                    <!--</LinearLayout>-->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/frag_weather_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</FrameLayout>

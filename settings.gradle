@@ -1,0 +1,1 @@
+include ':app', ':magicindicator', ':library', ':MaterialDesign', ':library_refresh'

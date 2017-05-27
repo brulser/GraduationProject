@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="whiteBG">#eeeeee</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorWeatherTextTop">#caffffff</color>
+
+    <color name="color_text_second">#88ffffff</color>
+
+    <color name="green">#e581ff02</color>
+    <color name="listview_driver">#eeeeee</color>
+    <color name="bg">#4d4d4d</color>
+    <color name="color_bg_city">#64b5f6</color>
+
+    <color name="color_top_city">#2196f3</color>
+
+    <color name="divide_news">#bdbdbd</color>
+</resources>

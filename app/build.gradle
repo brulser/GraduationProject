@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'org.greenrobot.greendao'
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.brulser.graduationproject"
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    greendao {
+        schemaVersion 1
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //butterknife
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile files('libs/fastjson-1.2.31.jar')
+    compile project(':magicindicator')
+    compile project(':library')
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.huxq17.xrefreshview:xrefreshview:3.6.7'
+    compile 'com.nispok:snackbar:2.11.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+}
